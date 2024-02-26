@@ -201,15 +201,15 @@ class MoveGroupPythonInterfaceSimple(object):
         ## Or create more complicated trajectories by yourself
 
         ## Baseline Method: move the gripper near the target, and close it
-        self.set_gripper_width(0.02)
-        time.sleep(0.5)
+        self.set_gripper_width(0.012)
+        time.sleep(1)
         ## TODO: fill up the trajectory list below with your own recorded joint states
         
         trajectory_list = [[0, 39*pi/180, -27*pi/180, -17*pi/180], [0, 0, 0, 0]]
         for wp in trajectory_list:
             self.go_to_joint_state_arm(wp)
-            # Somehow "wait=True" doesn't prevent the system from pausing...
-            time.sleep(3)
+            # Somehow "wait=True" doesn't prevent the system from pausing for a enough long time...
+            time.sleep(4)
 
         ## TODO: set up the gripper width with your own recorded data
  	    # Stay for a while
