@@ -208,7 +208,7 @@ class MoveGroupPythonInterfaceSimple(object):
         trajectory_list = [[0, 39*pi/180, -27*pi/180, -17*pi/180], [0, 0, 0, 0]]
         for wp in trajectory_list:
             self.go_to_joint_state_arm(wp)
-            # Somehow "wait=True" doesn't prevent the system from pausing...
+            # Somehow "wait=True" doesn't prevent the system from pausing for a enough long time...
             time.sleep(4)
 
         ## TODO: set up the gripper width with your own recorded data
