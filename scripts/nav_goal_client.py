@@ -50,5 +50,6 @@ if __name__ == '__main__':
 		result = movebase_client(goal_x, goal_y, goal_theta)
 		if result:
 			rospy.loginfo("Goal Navigation Execution Done!")
+			rospy.loginfo(result)
 	except rospy.ROSInterruptException:
 		rospy.loginfo("Interruption Occurred in nav_goal_publisher")
