@@ -46,7 +46,7 @@ if __name__ == '__main__':
 		rospy.init_node('nav_goal_publisher')
 		goal_x = float(sys.argv[1])
 		goal_y = float(sys.argv[2])
-		goal_theta = float(sys.argv[3])
+		goal_theta = float(sys.argv[3]) * (math.pi/180)
 		result = movebase_client(goal_x, goal_y, goal_theta)
 		if result:
 			rospy.loginfo("Goal Navigation Execution Done!")
