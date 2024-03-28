@@ -216,8 +216,7 @@ class MoveGroupPythonInterfaceSimple(object):
         time.sleep(0.5)
         # Close the gripper (don't use 0.0 for your case, since it may damage the motor)
         self.set_gripper_width(0.0)
-		
-		self.go_to_joint_state_arm([0, 0, 0, 0])
+        self.go_to_joint_state_arm([0, 0, 0, 0])
         ## Custom Method (Optional)
 
     #####################################################
