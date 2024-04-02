@@ -24,10 +24,10 @@ class CaptureArena():
 		paper_h = 11 * 0.0254
 		arena_size = 72 * 0.0254
 		self.map_corners = np.array([
-			[0.5 * paper_h, 0.5 * paper_w, 0, 1], 
-			[arena_size - 0.5 * paper_h, 0.5 * paper_w, 0, 1], 
+			[arena_size * 0.5, paper_w * 0.5, 0, 1], 
+			[arena_size - 0.5 * paper_h, paper_w * 0.5, 0, 1], 
 			[arena_size - 0.5 * paper_h, arena_size - 0.5 * paper_w, 0, 1], 
-			[0.5 * paper_h, arena_size - 0.5 * paper_w, 0, 1]])
+			[arena_size * 0.5, arena_size - 0.5 * paper_w, 0, 1]])
 		
 		# The map coordinate of the target object
 		self.target_object = np.array([0, 0, 1])
